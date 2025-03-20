@@ -2,9 +2,12 @@ import discord
 from discord.ext import commands
 import asyncio
 
-TOKEN = "YOUR_BOT_TOKEN"
-MAIN_SERVER_ID = YOUR_MAIN_SERVER_ID
-AUDIT_SERVER_ID = YOUR_AUDIT_SERVER_ID
+import os
+
+TOKEN = os.getenv("TOKEN")
+MAIN_SERVER_ID = int(os.getenv("MAIN_SERVER_ID"))
+AUDIT_SERVER_ID = int(os.getenv("AUDIT_SERVER_ID"))
+
 
 # Audit Log Categories Mapping
 CATEGORY_MAPPING = {
